@@ -22,11 +22,15 @@ class SecondLargest{
 
 	int findSecondLargest(int arr[],int n){
 		int max, max2;
-		max=max2=arr[0];
-		for(int i=1;i<n;i++){
+		max=Integer.MIN_VALUE;//arr[0];
+		max2 = Integer.MIN_VALUE;;
+		for(int i=0;i<n;i++){
 			if(arr[i]>max){
 				max2 = max;
 				max = arr[i];
+			}
+			else if(arr[i]>max2){
+				max2 = arr[i];
 			}
 		}
 		return max2;
